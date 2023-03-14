@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-import router from "./routes/plants.js";
 import * as dotenv from "dotenv";
 dotenv.config();
 import passport from "passport";
@@ -24,7 +23,7 @@ const mongoDBConnection = async () => {
 };
 
 const loadRoutes = () => {
-  app.use("/api", router);
+  // app.use("/api", router);
   app.use("/api/plants", plantsRoutes);
   app.use("/api/users", userRoutes);
 };
@@ -61,20 +60,3 @@ const addMiddlewares = () => {
   loadRoutes();
   startServer();
 })();
-
-// (async function controller() {
-//   await mongoDBConnection();
-//   addMiddlewares();
-//   loadRoutes();
-//   startServer();
-// })();
-
-// async function controller() {
-//   await mongoDBConnection();
-//   addMiddlewares();
-//   loadRoutes();
-//   startServer();
-// }
-// export default controller;
-
-// export default app;
