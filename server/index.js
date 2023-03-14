@@ -54,11 +54,17 @@ const addMiddlewares = () => {
 };
 
 //IIFE
-(async function controller() {
+// (async function controller() {
+//   await mongoDBConnection();
+//   addMiddlewares();
+//   loadRoutes();
+//   startServer();
+// })();
+async function controller() {
   await mongoDBConnection();
   addMiddlewares();
   loadRoutes();
   startServer();
-})();
-
-export default app;
+}
+controller();
+// export default app;
