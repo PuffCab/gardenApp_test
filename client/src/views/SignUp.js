@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { serverURL } from "../utils/serverURL";
 
 const SignUp = () => {
   // Computed property Names, event handler for all 3 events
@@ -44,7 +45,7 @@ const SignUp = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5003/api/users/signup",
+        `${serverURL}/api/users/signup`,
         requestOptions
       );
       const result = await response.json();

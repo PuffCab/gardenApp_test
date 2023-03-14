@@ -1,6 +1,7 @@
 import { createContext } from "react";
 import { useState, useEffect } from "react";
 import { getToken } from "../utils/getToken";
+import { serverURL } from "../utils/serverURL";
 
 export const AuthContext = createContext();
 export const AuthContextProvider = (props) => {
@@ -29,7 +30,7 @@ export const AuthContextProvider = (props) => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:5003/api/users/login", requestOptions)
+    fetch(`${serverURL}/api/users/login`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         console.log(result.msg);
@@ -67,7 +68,7 @@ export const AuthContextProvider = (props) => {
 
       try {
         const response = await fetch(
-          "http://localhost:5003/api/users/myprofile",
+          `${serverURL}/api/users/myprofile`,
           requestOptions
         );
         const result = await response.json();

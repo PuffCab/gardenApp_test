@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { serverURL } from "../utils/serverURL";
 
 function useFetch(_id) {
   const [plant, setPlant] = useState(null);
@@ -6,8 +7,8 @@ function useFetch(_id) {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const url = _id
-    ? `http://localhost:5003/api/plants/${_id}`
-    : "http://localhost:5003/api/plants/all";
+    ? `${serverURL}/api/plants/${_id}`
+    : `${serverURL}/api/plants/all`;
 
   async function fetchData() {
     try {

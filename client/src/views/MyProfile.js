@@ -4,6 +4,7 @@ import { Button } from "react-bootstrap";
 import { useEffect } from "react";
 import { getToken } from "../utils/getToken";
 import { AuthContext } from "../store/AuthContext";
+import { serverURL } from "../utils/serverURL";
 
 const MyProfile = () => {
   const [error, setError] = useState(null);
@@ -75,7 +76,7 @@ const MyProfile = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5003/api/users/imageupload",
+        `${serverURL}/api/users/imageupload`,
         requestOptions
       );
       const result = await response.json();
@@ -104,10 +105,7 @@ const MyProfile = () => {
           body: urlencoded,
         };
 
-        fetch(
-          "http://localhost:5003/api/users/updateuserimage",
-          requestOptions2
-        )
+        fetch(`${serverURL}/api/users/updateuserimage`, requestOptions2)
           .then((response) => response.json())
           .then((result) => console.log(result));
       } catch (error) {
@@ -142,7 +140,7 @@ const MyProfile = () => {
       };
 
       const response = await fetch(
-        "http://localhost:5003/api/users/updateuserinfo",
+        `${serverURL}/api/users/updateuserinfo`,
         requestOptions3
       );
       const updatedUserProfile = await response.json();

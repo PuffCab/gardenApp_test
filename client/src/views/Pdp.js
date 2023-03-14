@@ -4,6 +4,7 @@ import useFetch from "../hooks/useFetch";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../store/AuthContext";
 import { getToken } from "../utils/getToken";
+import { serverURL } from "../utils/serverURL";
 
 function Pdp() {
   const { _id } = useParams();
@@ -46,7 +47,7 @@ function Pdp() {
       };
 
       const response = await fetch(
-        "http://localhost:5003/api/plants/all",
+        `${serverURL}/api/plants/all`,
         requestOptions
       );
       const result = await response.json();
@@ -92,7 +93,7 @@ function Pdp() {
       };
 
       const response = await fetch(
-        `http://localhost:5003/api/plants/${_id}/comments`,
+        `${serverURL}/api/plants/${_id}/comments`,
         requestOptions2
       );
       const result = await response.json();
@@ -140,7 +141,7 @@ function Pdp() {
       };
 
       const response = await fetch(
-        `http://localhost:5000/api/plants/${_id}/comments`,
+        `${serverURL}/api/plants/${_id}/comments`,
         requestOptions3
       );
       const result = await response.json();
