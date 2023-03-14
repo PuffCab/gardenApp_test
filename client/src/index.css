@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+ background-color: tomato;
+ 
+}
+ .home-page{
+background-color: tomato;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  background-image: url(https://res.cloudinary.com/dvqfcis2q/image/upload/v1677146192/Plants/vanzujt4usleujimfut1.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
+  padding-bottom: 5rem;
+} 
+
+.profile-page{
+  background-color: tomato;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+background-image: url(https://res.cloudinary.com/dvqfcis2q/image/upload/v1677248952/Plants/thitiphum-koonjantuek-TFqjlTmkeyY-unsplash_n3lqdc.jpg);
+    background-size:cover;
+
+    background-repeat: repeat;
+    background-position: center center;
+}
+.uplod-userfoto{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+
+}
+
+.login-page {
+  background-color: tomato;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  /* justify-content: space-between; */
+  background-image: url(https://res.cloudinary.com/dvqfcis2q/image/upload/v1677248928/Plants/xiaolong-wong-nibgG33H0F8-unsplash_n0k8io.jpg);
+  background-size: cover;
+
+  background-repeat: repeat;
+  background-position: center center;
+}
+
+.sign-up-page {
+  background-color: tomato;
+  color:black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  /* justify-content: space-between; */
+  background-image: url(https://res.cloudinary.com/dvqfcis2q/image/upload/v1677078833/Plants/zo2fvtq6sskoiaksrcya.jpg);
+  background-size: cover;
+
+  background-repeat: repeat;
+  background-position: center center;
+
+      
+    
+}
+
+h1{
+  color:whitesmoke;
+}
+
+/* .h1-pdp{
+ color: black;
+} */
+h2{
+  color: whitesmoke
+}
+
+.custom-button{
+  background-color: tomato;
+  border-color: black;
+  
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.cardlist-card {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  object-fit: cover;
+}
+
+.login {
+  height: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.login-inputs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+input {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #cecece;
+  margin: 10px;
+}
+
+.login-button {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #cecece;
+  background-color: black;
+  color: white;
+}
+.register-button {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #cecece;
+  background-color: black;
+  color: white;
+}
+
+
+/* PDP */
+.comment {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+.comment-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.comment-details {
+  flex-grow: 1;
+}
+
+.comment-author {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.delete-comment {
+  margin-left: auto;
+}
