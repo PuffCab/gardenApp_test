@@ -42,12 +42,12 @@ const addMiddlewares = () => {
     })
   );
 
-  // const corsOptions = {
-  //   origin: "http://localhost:3000",
-  //   credentials: true,
-  // };
-  // app.use(cors(corsOptions));
-  app.use(cors());
+  const corsOptions = {
+    origin: "*",
+    credentials: true,
+  };
+  app.use(cors(corsOptions));
+  // app.use(cors());
   cloudinaryConfig();
   app.use(passport.initialize());
   passport.use(jwtStrategy);
