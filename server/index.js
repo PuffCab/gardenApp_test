@@ -53,13 +53,6 @@ const addMiddlewares = () => {
   passport.use(jwtStrategy);
 };
 
-//IIFE
-// (async function controller() {
-//   await mongoDBConnection();
-//   addMiddlewares();
-//   loadRoutes();
-//   startServer();
-// })();
 async function controller() {
   await mongoDBConnection();
   addMiddlewares();
@@ -67,4 +60,4 @@ async function controller() {
   startServer();
 }
 controller();
-// export default app;
+export default app;
